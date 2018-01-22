@@ -82,7 +82,7 @@ Now we are also going to need some sample images to test the model against. I'm 
 ```bash
 wget -O image0.jpeg https://cdn-images-1.medium.com/max/1600/1*sPdrfGtDd_6RQfYvD5qcyg.jpeg
 
-wget -O image1.jpeg https://www.google.co.uk/imgres?imgurl=http%3A%2F%2Fkidszoo.org%2Fwp-content%2Fuploads%2F2015%2F02%2Fclownfish3-1500x630.jpg&imgrefurl=http%3A%2F%2Fkidszoo.org%2Four-animals%2Fclownfish%2F&docid=ck2VMetqCvgH7M&tbnid=1w7pqpZbQtPrLM%3A&vet=10ahUKEwiNvbDD0-vYAhXSFewKHQZiClMQMwjtASgjMCM..i&w=1500&h=630&safe=active&client=firefox-b-ab&bih=752&biw=1440&q=clown%20fish&ved=0ahUKEwiNvbDD0-vYAhXSFewKHQZiClMQMwjtASgjMCM&iact=mrc&uact=8
+wget -O image1.jpeg http://kidszoo.org/wp-content/uploads/2015/02/clownfish3-1500x630.jpg
 ```
 
 ### Loading the model for use
@@ -174,21 +174,25 @@ array = mx.nd.array(img)
 (1L, 3L, 224L, 224L)
 ```
 
-Here’s our input picture.
+Here’s our input picture's.
 
 ![Input picture 448x336 (Source: metaltraveller.com)](image0.jpeg)
+![Input picture 1500x630 (Source: kidszoo.org](image1.jpeg)
 
-Its imput size is 448x336 and its in full colour. Remember our model needs images of 224x224 and in RGB.
+There imput sizes are 448x336 / 1500x630 and they are in full colour. Remember our model needs images of 224x224 and in RGB.
 
-Once processed, this picture has been resized and split into RGB channels stored in array[0] 
+Once processed, these pictures have been resized and split into RGB channels stored in array[0] 
 
 ![array[0][0] : 224x224 red channel](image0-red.jpeg)
+![array[0][0] : 224x224 red channel](image1-red.jpeg)
 
 ![array[0][1] : 224x224 green channel](image0-green.jpeg)
+![array[0][1] : 224x224 red channel](image1-green.jpeg)
 
 ![array[0][2] : 224x224 blue channel](image0-blue.jpeg)
+![array[0][2] : 224x224 blue channel](image1-blue.jpeg)
 
-If batch size was higher than 1, then we would have a second image in array[1], a third in array[2] and so on.
+If you choose to increase the batch size to higher than 1 and run both images through the model together, then we would have a second image in array[1], a third in array[2] and so on.
 
 Now your data is prepared let’s predict!
 
