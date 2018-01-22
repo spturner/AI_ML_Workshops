@@ -42,7 +42,7 @@ You can run this AMI either on a standard instance or on a GPU instance. If you 
 However in these labs we are using pre-trained models for speed so a standard instance of Amazon Linux is fine. This will allow us to get going with the lab without installing any special tools as the Deep Learning AMI comes with those pre-baked. Just remeber you need to source the emnvironment after you SSH into the instance you create. In our case we want to use MXNet and pyhton 2:
 
 ```bash
-source activate mxnet_p2
+source activate mxnet_p27
 ```
 
 ## Using a pre-trained model
