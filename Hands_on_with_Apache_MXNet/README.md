@@ -270,4 +270,30 @@ What about the second highest category?
 
 Now you know how to use a pre-trained, state of the art model for image classification. All it took was a few lines of code and the rest was just data preparation. You can now try this with the other images (image1.jpeg and your own images) by starting at the data preparation stage again.
 
+## Exercise
 
+Now you know how to load a model and run a test against it, lets try with two other popular models. The following models are all trained against the ImageNet data set so in terms of code it's simply about replacing the model.
+
+Make a note of the categories that it returns and compare the results
+
+### VGG16
+
+Published in 2014, VGG16 is a model built from 16 layers (research paper). It won the 2014 ImageNet challenge by achieving a 7.4% error rate on object classification.
+
+### ResNet-152
+
+Published in 2015, ResNet-152 is a model built from 152 layers (research paper). It won the 2015 ImageNet challenge by achieving a record 3.57% error rate on object detection. That’s much better than the typical human error rate which is usually measured at 5%.
+
+### Downloading the models
+
+Time to visit the model zoo once again. Just like for Inception v3, we need to download model definitions and parameters. All three models have been trained on the same categories, so we can reuse our synset.txt file.
+
+```bash
+$ wget http://data.dmlc.ml/models/imagenet/vgg/vgg16-symbol.json
+
+$ wget http://data.dmlc.ml/models/imagenet/vgg/vgg16-0000.params
+
+$ wget http://data.dmlc.ml/models/imagenet/resnet/152-layers/resnet-152-symbol.json
+
+$ wget http://data.dmlc.ml/models/imagenet/resnet/152-layers/resnet-152-0000.params
+```
