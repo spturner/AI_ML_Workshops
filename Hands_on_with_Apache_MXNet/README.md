@@ -257,6 +257,6 @@ What about the second highest category?
 'n04296562 stage'
 ```
 
-Now you know how to use a pre-trained, state of the art model for image classification. All it took was a few lines of code and the rest was just data preparation.
+Now you know how to use a pre-trained, state of the art model for image classification. All it took was a few lines of code and the rest was just data preparation. You can now try this with the other images (image1.jpeg and your own images) by starting at the data preparation stage again.
 
 
