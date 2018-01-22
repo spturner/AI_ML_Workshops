@@ -37,9 +37,9 @@ GPU 0: GRID K520 (UUID: GPU-d470337d-b59b-ca2a-fe6d-718f0faf2153)
 '1.0.0'
 ```
 
-You can run this AMI either on a standard instance or on a GPU instance. If you want to train a model and dont have a navida GPU on your machine your most inexpensive option will be to use a g2.2xlarge instance at $0.65 per hour.
+You can run this AMI either on a standard instance or on a GPU instance. If you want to train a model and don’t have a NVidia GPU on your machine your most inexpensive option will be to use a g2.2xlarge instance at $0.65 per hour.
 
-However in these labs we are using pre-trained models for speed so a standard instance of Amazon Linux is fine. This will allow us to get going with the lab without installing any special tools as the Deep Learning AMI comes with those pre-baked. Just remeber you need to source the emnvironment after you SSH into the instance you create. In our case we want to use MXNet and pyhton 2:
+However in these labs we are using pre-trained models for speed so a standard instance of Amazon Linux is fine. This will allow us to get going with the lab without installing any special tools as the Deep Learning AMI comes with those pre-baked. Just remeber you need to source the environment after you SSH into the instance you create. In our case we want to use MXNet and python 2:
 
 ```bash
 source activate mxnet_p27
@@ -53,7 +53,7 @@ In this first part of the lab we are going to recognising images with Inception 
 
 The model zoo is a collection of pre-trained models ready for use. You’ll find the model definition, the model parameters (i.e. the neuron weights) and instructions.
 
-Let’s download the definition and the parameters. Feel free to open the first file you’ll see the definition of all the layers. The second one is a binary file, so dont try and open that.
+Let’s download the definition and the parameters. Feel free to open the first file you’ll see the definition of all the layers. The second one is a binary file, so don’t try and open that.
 
 ```bash
 $ wget http://data.dmlc.ml/models/imagenet/inception-bn/Inception-BN-symbol.json
@@ -77,7 +77,7 @@ n01491361 tiger shark, Galeocerdo cuvieri
 n01494475 hammerhead, hammerhead shark
 ```
 
-Now we are also going to need some same images to test the model against. I'm going to suggest two images and if you are feeling adventurous feel free to add some of your own images and have a look at the outputs
+Now we are also going to need some sample images to test the model against. I'm going to suggest two images and if you are feeling adventurous, feel free to add some of your own images and have a look at the outputs
 
 ```bash
 wget -O image0.jpeg https://cdn-images-1.medium.com/max/1600/1*sPdrfGtDd_6RQfYvD5qcyg.jpeg
@@ -128,11 +128,11 @@ That’s all it takes. Four lines of code! Now it’s time to push some data in 
 
 ### Data preparation
 
-Before we get some predictions out of our model we'll need to prep the data (the images you downlaoded)
+Before we get some predictions out of our model we'll need to prep the data (the images you downloaded)
 
 Remember that the model expects a 4-dimension NDArray holding the red, green and blue channels of a single 224 x 224 image. We’re going to use the popular OpenCV library to build this NDArray from our input image. This is already installed on the Amazon Deep Learning AMI.
 
-First lets load some libarys we'll need.
+First lets load some libaries we'll need.
 
 ```python
 import numpy as np
@@ -145,7 +145,7 @@ Now we read the image, this will return a numpy array shaped as (image height, i
 img = cv2.imread('<YOUR_IMAGE_FILE_NAME>')
 ```
 
-Lets convert the image to RGB, so we have the correct order (RGB) for the pre-trained model we are using.
+Let’s convert the image to RGB, so we have the correct order (RGB) for the pre-trained model we are using.
 
 ```python
 img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
