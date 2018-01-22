@@ -7,6 +7,10 @@
 - SSH Client and key
 - Linux Skills
 
+## Credits
+
+This workshop is adapted from Julien Simons blog posts: [https://medium.com/@julsimon/getting-started-with-deep-learning-and-apache-mxnet-34a978a854b4](https://medium.com/@julsimon/getting-started-with-deep-learning-and-apache-mxnet-34a978a854b4)
+
 ## Workshop Overview
 
 In this workshop we are going to take a look at running Apache MXNet on the Amazon Linux Deep Learning AMI. We'll take a pre-trained image reckognition model and use this to predict the contents of images we feed into the model.
