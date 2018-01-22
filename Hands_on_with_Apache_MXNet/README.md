@@ -58,7 +58,7 @@ Let’s download the definition and the parameters. Feel free to open the first 
 ```bash
 $ wget http://data.dmlc.ml/models/imagenet/inception-bn/Inception-BN-symbol.json
 
-$ wget -O Inception-BN-0000.param http://data.dmlc.ml/models/imagenet/inception-bn/Inception-BN-0126.params
+$ wget -O Inception-BN-0000.params http://data.dmlc.ml/models/imagenet/inception-bn/Inception-BN-0126.params
 ```
 
 Since this model has been trained on the ImageNet data set, we also need to download the corresponding list of image categories which contains the 1000 categories, that way we can see the human readable prediction output. You can take a look at this file also.
@@ -86,6 +86,13 @@ wget -O image1.jpeg https://www.google.co.uk/imgres?imgurl=http%3A%2F%2Fkidszoo.
 ```
 
 ### Loading the model for use
+
+Open your python shell,
+
+```bash
+python
+>>>
+```
 
 Load the model from its saved state. MXNet calls this a checkpoint. In return, we get the input Symbol and the model parameters.
 
