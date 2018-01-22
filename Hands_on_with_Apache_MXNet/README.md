@@ -282,7 +282,7 @@ Make a note of the categories that it returns and compare the results
 
 ### VGG16
 
-Published in 2014, VGG16 is a model built from 16 layers (research paper). It won the 2014 ImageNet challenge by achieving a 7.4% error rate on object classification.
+Published in 2014, VGG16 is a model built from 16 layers (research paper). It won the 2014 ImageNet challenge by achieving a 7.4% error rate on object classification. As a bonus you can also download and test VGG19.
 
 ### ResNet-152
 
@@ -294,7 +294,11 @@ Time to visit the model zoo once again. Just like for Inception v3, we need to d
 
 ```bash
 $ wget http://data.dmlc.ml/models/imagenet/vgg/vgg16-symbol.json
+```
 
+__NOTE:__ You'll need to edit this file and swap ```prob_label``` and ```prob``` to ```softmax_label``` and ```softmax``` respectively
+
+```bash
 $ wget http://data.dmlc.ml/models/imagenet/vgg/vgg16-0000.params
 
 $ wget http://data.dmlc.ml/models/imagenet/resnet/152-layers/resnet-152-symbol.json
