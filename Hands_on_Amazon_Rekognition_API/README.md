@@ -1,10 +1,18 @@
-Hands on with the Amazon Rekognition API
+## Hands on with the Amazon Rekognition API
 
 ### Requirements
 
 - AWS Account
 - AWS CLI tools installed
 - python + boto3 + some python skills
+
+### Why Amazon Rekognition?
+
+Earlier we looked at image recognition using Apache MXNet and we analysed an image of a rock guitarist. In order to do that we had to prepare the data, this takes time when dealing with thousands or millions of images. Rekognition does this for you automatically. The screen shot below shows the same image processed by rekognition.
+
+![demo0.png](demo0.png)
+
+As you can see AWS has already done the heavy lifting of data preparation for you. Also it extends much further tom object detection. It can detect faces, guess the age of the person, compare faces and even process video streams in the same way.
 
 ### Using Amazon Rekognition
 
@@ -537,11 +545,17 @@ for l in labels:
         labelText = labelText + l['Name'] + ", "
 ```
 
-### Challenge (Where's Ric)
+### Challenge 1 (Where's Ric)
 
 Durring registration I took some photos and uploaded them to a public S3 bucket s3://image-demo-lab there is also an array of asorted images in the bucket. Your challenge is to:
 
 - a) find how many pictures in the bucket contain a photo of me
 - b) find your self in the images
+
+You'll need to create a compare-faces function and also get a list of all the objects in the S3 bucket (warning they may not all be images!) Extra points for the fastest way of doing this.
+
+#### Resources
+
+[http://boto3.readthedocs.io/en/latest/reference/services/rekognition.html](http://boto3.readthedocs.io/en/latest/reference/services/rekognition.html)
 
 Let an instructor know when you've completed this there may be a prize.
