@@ -4,6 +4,8 @@ Welcome to the AI/ML workshops for the AWS Buidlers Days 2018. Today we are goin
 
 Below you'll find todays Agenda and our Evangelists and SA's will work with you in these labs to help you complete the sessions.
 
+![Builders Days 2018](./buildersday.png)
+
 ## Agenda
 
 | Time | Session | Workshop Title |
