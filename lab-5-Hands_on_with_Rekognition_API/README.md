@@ -469,8 +469,6 @@ __Note:__ OSX may need to run ```sudo -H pip install boto3```
 
 Lets look at some same code that allows you to detect faces and the labels for each face. Try running this on a few of the sample images.
 
-TO TIDY UP AND ADD CLI OPTIONS!!!!!
-
 ```python
 #!/usr/bin/env python
 
