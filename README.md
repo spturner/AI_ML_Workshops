@@ -1,7 +1,7 @@
 # AI/ML Workshops 
 ### 28 June 2018
 
-Welcome to the AI/ML workshops. Today we are going to take a look at several AI/ML offerings from AWS that you can use to build and train models or easily intergrate AI/ML features into your applications.
+Welcome to the AI/ML workshops. Our focus today will be on the AI/ML solutions provided by AWS, which can assist you in developing and training models, as well as incorporating AI/ML functionality into your applications with ease.
 
 Below you'll find todays Agenda and links to the labs that we will be using today.
 
