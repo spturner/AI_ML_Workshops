@@ -20,5 +20,5 @@ Below you'll find todays Agenda and links to the labs that we will be using toda
 
 ## Feedback
 
-Please remember to fill in your survey following today's workshop
+Please remember to fill in your survey following all workshop
 
